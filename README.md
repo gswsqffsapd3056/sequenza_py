@@ -7,4 +7,6 @@
 尝试使用python重构其中最容易中断的，读取seqz.gz并预处理步骤。
 
 ## 主要实现方法
-1. R 中调用 reticulate 指定python环境，使用python重构preprocessing部分代码。做数据交互。
+1. R 中调用 reticulate 指定python环境，使用python重构preprocessing read.seqz.chr 函数，做数据交互。 或尝试简单更改scarHRD导入默认的sequenza参数
+2. `environment(read.seqz.chr) <-  environment(sequenza::read.seqz.chr)` 替换被scarHRD library到环境中的sequenza函数
+3. 调试运行
